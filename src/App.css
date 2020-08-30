@@ -32,8 +32,9 @@ html,body {
 }
 
 .modal .modal-dialog {
-  top: 25% !important;
+  margin: auto;
   width: 250px;
+  top: 25% !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
   border-radius: 5px !important; 
