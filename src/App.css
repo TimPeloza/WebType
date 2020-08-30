@@ -34,7 +34,6 @@ html,body {
 .modal .modal-dialog {
   top: 25% !important;
   width: 250px;
-  border: solid rgb(133, 133, 150) 10px;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
   border-radius: 5px !important; 
@@ -44,7 +43,7 @@ html,body {
   -webkit-border-radius: 0px !important;
   -moz-border-radius: 0px !important;
   border-radius: 0px !important; 
-  background: rgb(128, 128, 104);
+  background: rgb(153, 152, 152);
 }
 
 .modal .btn {
@@ -69,5 +68,4 @@ html,body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 100%;
 }

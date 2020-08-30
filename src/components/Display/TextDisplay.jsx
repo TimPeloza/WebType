@@ -24,10 +24,10 @@ class TextDisplay extends Component {
 
     render() {
         return (
-            <div className="text-container">
+            <React.Fragment>
                 <div id="text">{this.determineText()}</div>
                 <div className="pointer">^</div>
-            </div>
+            </React.Fragment>
         );
     }
 }

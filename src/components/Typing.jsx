@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TextDisplay from './Display/TextDisplay';
 import { LETTERSTATUS } from './Enums.ts';
 import ScoreScreen from './Display/ScoreScreen';
+import { Container, Row } from 'react-bootstrap'
 
 class Typing extends Component {
 
@@ -141,27 +142,25 @@ class Typing extends Component {
     render() {
         return (
             <React.Fragment>
-                <main className="container-fluid h-100">
-                    <div id="text-display-row" className="row bg-secondary h-100">
-                        <div className="container text-center">
-                            <div id="text-container" className="container">
-                                <TextDisplay
-                                    displayText={this.state.currentText.letters}
-                                    index={this.state.currentIndex}
-                                />
-                                <ScoreScreen
-                                    wordsTyped={this.state.wordCount}
-                                    elapsedTime={this.state.endTime - this.state.startTime}
-                                    incorrectCharacters={this.state.incorrectCharacters}
-                                    totalCharacters={this.state.currentTextRaw.length}
-                                    show={this.state.hasFinished}
-                                    retry={this.retry}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </main>
-            </React.Fragment>
+                <Container fluid style={{ height: '100%', backgroundColor: 'rgb(121, 121, 121)' }}>
+                    <Row style={{ height: '100%' }}>
+                        <Container id="text-container" style={{ height: '100%' }}>
+                            <TextDisplay
+                                displayText={this.state.currentText.letters}
+                                index={this.state.currentIndex}
+                            />
+                            <ScoreScreen
+                                wordsTyped={this.state.wordCount}
+                                elapsedTime={this.state.endTime - this.state.startTime}
+                                incorrectCharacters={this.state.incorrectCharacters}
+                                totalCharacters={this.state.currentTextRaw.length}
+                                show={this.state.hasFinished}
+                                retry={this.retry}
+                            />
+                        </Container>
+                    </Row>
+                </Container>
+            </React.Fragment >
         );
     }
 }
